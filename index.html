@@ -5,17 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fetch</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-    h2{color: rgb(15, 51, 105); font-weight: bold;}
+    h1{text-align: center;color: brown;}    
+    h2,th{color: rgb(15, 51, 105); font-weight: bold;}
     label{color: rgb(15, 51, 105);}
     input{padding: 10px;margin-left: 10px;}
     button{color: whitesmoke;background: rgb(15, 51, 105);padding: 10px;width: 200px;border-radius: 20px;;}
     button:hover{background: whitesmoke;color: rgb(15, 51, 105);}
+    button#refresh{width: auto;}
     span{color: brown;}
+   
 
     </style>
 </head>
 <body>
+    <h1>ADD EDIT POST using FETCH</h1>
+    
 <hr>
     <section id="two">
         <h2>Add Section</h2>
@@ -40,6 +46,26 @@
 <hr>
 
     </section>
+    <section id="one">
+            <h2>GET POSTS</h2>
+            <button id="refresh"><i class="fa fa-refresh"></i>   Refresh</button><br><br>
+            <table border="1">
+                
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>USER ID</th>
+                        <th>TITLE</th>
+                        <th>BODY</th>
+                    </tr>
+                </thead>
+                <tbody>
+        
+                </tbody>
+            </table>
+    </section>
+    <hr>
+    <br><span>Finally -_- </span>
     
     <script src="index .js"></script>
 </body>

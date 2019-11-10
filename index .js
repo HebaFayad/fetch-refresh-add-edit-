@@ -1,3 +1,50 @@
+//Get post Section
+let refresh = document.getElementById("refresh");
+let tbody = document.querySelector("tbody");
+
+    fetch("https://jsonplaceholder.typicode.com/posts")
+    .then(response => response.json())
+    .then(function(data) {
+       // console.log(data);
+        data.forEach(element => {
+       // console.log(element);
+       let tr = document.createElement("tr");
+
+    for (const key in element) {
+         if (element.hasOwnProperty(key)) {
+         const elements = element[key];
+       //  console.log(elements);
+          let td = document.createElement("td");
+
+            td.innerHTML = elements;
+            tbody.appendChild(tr);
+            tr.appendChild(td);
+
+
+ }
+}
+});
+})
+
+    refresh.addEventListener("click",function(){
+    fetch("https://jsonplaceholder.typicode.com/posts")
+    .then(response => response.json())
+    .then(function(data) {
+    console.log(data);
+    data.forEach(element => {
+   // console.log(element);
+    for (const key in element) {
+    if (element.hasOwnProperty(key)) {
+    const elements = element[key];
+    // console.log(elements);
+}
+
+}
+});
+})
+
+        });
+
 //Add Section
 let btn=document.getElementById('add');
 btn.addEventListener("click",function(){
