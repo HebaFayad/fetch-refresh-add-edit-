@@ -24,10 +24,12 @@ headers: {
 //Edit Section
 let edit=document.getElementById('edit');
 edit.addEventListener("click",function(){
+    try{
 let id=document.getElementById("id").value;    
 let userId2=document.getElementById("userId2").value;
 let fbody2=document.getElementById('fbody2').value;
 let title2=document.getElementById('title2').value;
+let error=document.querySelector('span');
   //  console.log(fuserId.value)
 
 fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
@@ -42,5 +44,16 @@ headers: {
 }
 })
 .then(response => response.json())
-.then(json => console.log(json))
+.then(function(data) {
+    console.log(data);
+    
+    error.innerHTML = `**Changed data of ${id} successfully`;
+})
+} catch (error) {
+
+error.innerHTML = `**Changing data of ${id} was not successfu`;
+
+
+}
+
 })
